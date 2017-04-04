@@ -5,6 +5,3 @@ node_modules
 # npm likes to complain
 npm-debug.log
 
-# Compiled files don't belong in git
-static
-
