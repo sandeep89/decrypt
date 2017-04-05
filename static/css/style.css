@@ -27,3 +27,11 @@ padding: 15px;
   background-color: #f5f5f5;
   border-right: 1px solid #eee;
 }
+
+.result {
+	margin-top: 40px;
+}
+
+.hide {
+	visibility: hidden;
+}

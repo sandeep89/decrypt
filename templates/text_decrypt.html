@@ -1,4 +1,14 @@
 {% extends "index.html" %}
 {% block content %}
-Test template
+	<form>
+		<div class="form-group">
+			<label for="comment">Hashed Text:</label>
+			<textarea class="form-control" type="text" rows="5" id="hashed_value"></textarea>
+		</div>
+		<button type="button" class="btn btn-primary pull-right">Decrypt</button>
+	</form>
+	<div class="result hide">
+		<label for="value">Value:</label>
+		<textarea class="form-control" type="text" rows="5" id="value" readonly> </textarea>
+	</div>
 {% endblock %}
