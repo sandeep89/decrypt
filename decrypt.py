@@ -1,6 +1,7 @@
-from flask import Flask, render_template, send_from_directory
+from flask import request, Flask, render_template, send_from_directory
 from flask_restful import reqparse, Resource, Api
 import json
+from core.aes_encyption import decrypt
 
 app = Flask(__name__)
 api = Api(app)
@@ -24,9 +25,13 @@ def send_css(path):
 def send_fonts(path):
     return send_from_directory('static/fonts', path)
 
-@app.route('/decrypt/text')
+@app.route('/decrypt/text', methods=['GET', 'POST'])
 def decrypt_text():
-	return render_template('text_decrypt.html')
+	if request.method == 'POST':
+		value = decrypt('V3/bLnDsAFDGmKYqeAsD8ScvhvxZ7/FudPa5Psytl7Y=')
+		return render_template('text_decrypt.html', value=value)
+	else:
+		return render_template('text_decrypt.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

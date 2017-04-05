@@ -1,14 +1,14 @@
 {% extends "index.html" %}
 {% block content %}
-	<form>
+	<form action="/decrypt/text" method="post">
 		<div class="form-group">
 			<label for="comment">Hashed Text:</label>
 			<textarea class="form-control" type="text" rows="5" id="hashed_value"></textarea>
 		</div>
-		<button type="button" class="btn btn-primary pull-right">Decrypt</button>
+		<input type="submit" class="btn btn-primary pull-right" value="Decrypt">
 	</form>
-	<div class="result hide">
+	<div class="result ">
 		<label for="value">Value:</label>
-		<textarea class="form-control" type="text" rows="5" id="value" readonly> </textarea>
+		<textarea class="form-control" type="text" rows="5" id="value" readonly>{{ value }} </textarea>
 	</div>
 {% endblock %}

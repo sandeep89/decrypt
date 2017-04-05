@@ -1,0 +1,8 @@
+[graylog]
+key = asdfasdgasdadsfasdadsdas
+
+[data]
+data_file = graylog-data.csv
+decrypt_fields = field1,field2,field3
+delimiter = ,
+quotechar = "
